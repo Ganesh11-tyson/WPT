@@ -1,0 +1,10 @@
+      .Desktop {
+        width: 1350px;
+        height: 100%;
+        background-color: red;
+      }
+      .Mobile {
+        width: 200px;
+        height: 100%;
+        background-color: red;
+      }

@@ -1,0 +1,59 @@
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      .common {
+        height: 100px;
+        width: 100px;
+      }
+      .A {
+        background-color: cadetblue;
+        margin: 5px;
+      }
+      .B {
+        background-color: red;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="button" id="btn" onclick="change()" value="Click Me" />
+    <hr />
+    <div id="mydiv1" class="common A"></div>
+    <div id="mydiv2" class="common B"></div>
+    <div id="mydiv3" class="common A"></div>
+    <div id="mydiv4" class="common B"></div>
+    <hr />
+    <p class="A">
+      kdhhkjahdkj hkhkjhkhdk hkjhk hkhkhkh khkhkjh kjh kh kjhkj hk hk hk h kjh
+      khjk hjk hh kh hk jh hkj hkj hkjh kjh h h hkh khh hh h kh h hh kh
+      dhhkjahdkj hkhkjhkhdk hkjhk hkhkhkh khkhkjh kjh kh kjhkj hk hk hk h kjh
+      khjk hjk hh kh hk jh hkj hkj hkjh kjh h h hkh khh hh h kh h hh kh
+      dhhkjahdkj hkhkjhkhdk hkjhk hkhkhkh khkhkjh kjh kh kjhkj hk hk hk h kjh
+      khjk hjk hh kh hk jh hkj hkj hkjh kjh h h hkh khh hh h kh h hh kh
+      dhhkjahdkj hkhkjhkhdk hkjhk hkhkhkh khkhkjh kjh kh kjhkj hk hk hk h kjh
+      khjk hjk hh kh hk jh hkj hkj hkjh kjh h h hkh khh hh h kh h hh kh
+    </p>
+
+    <script>
+      function change() {
+        // var refToDiv = document.getElementById("mydiv3");
+        // refToDiv.style.backgroundColor = "yellow";
+
+        // var allDivs = document.getElementsByTagName("DIV");
+
+        // for (var i = 0; i < allDivs.length; i++) {
+        //   var currentDiv = allDivs[i];
+        //   currentDiv.style.backgroundColor = "yellow";
+        // }
+
+        var allElements = document.getElementsByClassName("A");
+
+        for (var i = 0; i < allElements.length; i++) {
+          var currentElement = allElements[i];
+          currentElement.style.backgroundColor = "yellow";
+        }
+      }
+    </script>
+  </body>
+</html>

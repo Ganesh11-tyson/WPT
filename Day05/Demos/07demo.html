@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <h1>Travellers</h1>
+      <hr />
+      <input type="button" value="Add Traveller" onclick="AddTraveller()" />
+      <hr />
+      <table id="myTable" border="1" style="width: 400px">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </center>
+    <script>
+      function AddTraveller() {
+        var row = `<tr>
+                        <td>
+                        <input type="text" />
+                        </td>
+                        <td>
+                        <input type="text" />
+                        </td>
+                        <td>
+                        <input type="number" />
+                        </td>
+                   </tr>`;
+
+        var refTotableBody = document.getElementById("tableBody");
+
+        refTotableBody.innerHTML = refTotableBody.innerHTML + row;
+      }
+    </script>
+  </body>
+</html>

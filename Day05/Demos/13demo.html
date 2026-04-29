@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var counter1 = 0;
+
+      function KeepCounting() {
+        counter1 = counter1 + 1;
+        console.log(counter1);
+        // if (counter1 == 5) {
+        //   F2();
+        // }
+      }
+
+      var queNo;
+      function F1() {
+        queNo = setInterval(KeepCounting, 1000);
+      }
+
+      function F2() {
+        clearInterval(queNo);
+      }
+    </script>
+    <input type="button" value="Start 1" onclick="F1()" />
+    <input type="button" value="Stop 1" onclick="F2()" />
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>Demo</title>
+    <script>
+      function F1() {
+        var refToTxtNameRelatedObject = document.getElementById("txtName");
+        refToTxtNameRelatedObject.value = "abc";
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="txtName" value="" />
+    <input type="button" id="btn" value="Click Me!" onclick="F1()" />
+    <script>
+      //   F1();
+    </script>
+  </body>
+</html>

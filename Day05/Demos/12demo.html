@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="button" value="Disturb" onclick="Disturb()" />
+    <script>
+      //   console.log("Test 1");
+      //   SayHi();
+      //   console.log("Test 2");
+
+      //window.setTimeout(SayHi, 10000);
+      //window.setInterval(SayHi, 1000);
+
+      console.log("Test 1");
+      var queno = window.setTimeout(SayHi, 10000);
+      //   console.log(queno);
+      console.log("Test 2");
+
+      function SayHi() {
+        console.log("Hi!");
+      }
+
+      function Disturb() {
+        alert("this is priority code");
+      }
+    </script>
+  </body>
+</html>

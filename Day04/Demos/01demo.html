@@ -1,0 +1,209 @@
+<html>
+  <head>
+    <title>Document</title>
+    <script>
+      //Functional Programming
+      //------------------------------------------------------
+      //1. Every Javascript function returns!
+      //------------------------------------------------------
+      //   function DoSomething(x) {
+      //     if (x > 10) {
+      //       return "X is greater than 10";
+      //     }
+      //   }
+
+      //   //   var result = DoSomething(20);
+      //   //   console.log(result);
+
+      //   var result = DoSomething(2);
+      //   console.log(result); //see the result - undefined
+
+      //------------------------------------------------------
+      //2. Writing function : Variable holding function body!
+      //------------------------------------------------------
+      //   function DoSomething(x) {
+      //     if (x > 10) {
+      //       return "X is greater than 10";
+      //     }
+      //   }
+
+      //   var DoSomething = function (x) {
+      //     if (x > 10) {
+      //       return "X is greater than 10";
+      //     }
+      //   };
+
+      //   var result = DoSomething(20);
+      //   console.log(result);
+
+      //   debugger;
+      //   console.log(typeof DoSomething);
+      //   console.log(typeof DoSomething.__proto__.__proto__); //base of function is object
+
+      //------------------------------------------------------
+      //3. Hoisting
+      //------------------------------------------------------
+
+      //CODE 1
+      //   console.log(x);
+      //   var x = 100;
+      //   console.log(x);
+
+      //CODE 2
+      //   var x;
+      //   console.log(x);
+      //   x = 100;
+      //   console.log(x);
+
+      //CODE 1 is evantually converted into CODE 2
+      //using hoisting concept
+      //All declarations of variables are moved to top
+      //and after elevating the variables on top - they are assigned
+      //with undefined value - process is called hoisting
+
+      //consider another example:
+
+      //   SayHi("Jay");
+
+      //   function SayHi(name) {
+      //     console.log("hi ! " + name);
+      //   }
+
+      //   SayHi("Veeru");
+
+      //SayHi("Jay");
+
+      //   var SayHi = function (name) {
+      //     console.log("hi ! " + name);
+      //   };
+
+      //   SayHi("Veeru");
+
+      //------------------------------------------------------
+      //4. Passing Function as Parameter
+      //------------------------------------------------------
+
+      // function Check() {
+      //   if (1 > 10) {
+      //     console.log("miracle!");
+      //   } else {
+      //     console.log("Kya logic hai!");
+      //   }
+      // }
+
+      // function Check(f1, f2) {
+      //   if (1 > 10) {
+      //     f1();
+      //   } else {
+      //     f2();
+      //   }
+      // }
+
+      // function fnSuccess() {
+      //   console.log("miracle!");
+      // }
+
+      // function fnFailure() {
+      //   console.log("Kya logic hai!");
+      // }
+
+      // debugger;
+      // Check(fnSuccess, fnFailure);
+
+      //------------------------------------------------------
+      //5. Function returned as ReturnValue | We will see usage in React
+      //------------------------------------------------------
+
+      // function GiveMeSomething(choice) {
+      //   var v;
+
+      //   if (choice == 1) {
+      //     v = function () {
+      //       console.log("Hi!");
+      //     };
+      //   } else {
+      //     v = function () {
+      //       console.log("Bye");
+      //     };
+      //   }
+
+      //   return v;
+      // }
+
+      // var f = GiveMeSomething(11);
+
+      // f();
+
+      //------------------------------------------------------
+      //6.Writing Class / Object
+      // - a: Literal Syntax Of Object Creation
+      //------------------------------------------------------
+
+      // var person = {
+      //   No: 1,
+      //   Name: "mahesh",
+      //   IsConsultant: true,
+      //   Salary: null,
+      //   PFStatus: undefined,
+      //   Print: function () {
+      //     console.log(this.No + " | " + this.Name + " | " + this.IsConsultant);
+      //   },
+      // };
+
+      // person.Print();
+      // var employee = {};
+      // employee.__proto__ = person;
+      // console.log(employee.Name);
+
+      //------------------------------------------------------
+      //6.Writing Class / Object
+      // - b: Constructor Function Syntax Of Class / Object Creation
+      //------------------------------------------------------
+
+      // var Person = function (no, name, address) {
+      //   this.No = no;
+      //   this.Name = name;
+      //   this.Address = address;
+
+      //   this.Print = function () {
+      //     console.log(this.No + " | " + this.Name + " | " + this.Address);
+      //   };
+      // };
+
+      // var p1 = new Person(10, "Sachin", "Mumbai");
+      // var p2 = new Person(20, "Sourav", "Kolkata");
+
+      // p1.Print();
+      // p2.Print();
+
+      //------------------------------------------------------
+      //6.Writing Class / Object
+      // - c: Class Syntax of ECMA 6 ie. in year 2015
+      //------------------------------------------------------
+
+      class Person {
+        constructor(no, name, address) {
+          this.No = no;
+          this.Name = name;
+          this.Address = address;
+        }
+
+        Print() {
+          console.log(this.No + " | " + this.Name + " | " + this.Address);
+        }
+      }
+
+      class Employee extends Person {}
+
+      var p1 = new Person(10, "Sachin", "Mumbai");
+      var p2 = new Person(20, "Sourav", "Kolkata");
+
+      p1.Print();
+      p2.Print();
+
+      var emp = new Employee(9, "MSD", "Chennai");
+      emp.Print();
+    </script>
+  </head>
+  <body></body>
+</html>

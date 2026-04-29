@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      id="mydiv11"
+      style="
+        height: 150px;
+        width: 150px;
+        background-color: cadetblue;
+        position: absolute;
+        left: 0px;
+        top: 50px;
+      "
+    ></div>
+
+    <div
+      id="mydiv12"
+      style="
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        position: absolute;
+        left: 0px;
+        top: 50px;
+      "
+    ></div>
+
+    <input type="button" id="btn" value="Click Me" onclick="Move()" />
+
+    <script>
+      var leftCounter = 0;
+      function Move() {
+        var refTomydiv11 = document.getElementById("mydiv11");
+        refTomydiv11.style.left = leftCounter + "px";
+        leftCounter = leftCounter + 10;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Demo</title>
+    <script>
+      function F1() {
+        var refToTxtNameRelatedObject = document.getElementById("txtName");
+
+        var refToerrorControl = document.getElementById("errorControl");
+
+        var refToMyPara = document.getElementById("mypara");
+
+        if (refToTxtNameRelatedObject.value == "") {
+          // console.log("Name is required!");
+          refToerrorControl.innerText = "Name is required!";
+        } else {
+          refToerrorControl.innerText = "";
+          refToMyPara.innerText = "Welcome " + refToTxtNameRelatedObject.value;
+          // console.log("Welcome " + refToTxtNameRelatedObject.value);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="txtName" value="" />
+    <h3 id="errorControl" style="color: red"></h3>
+    <input type="button" id="btn" value="Click Me!" onclick="F1()" />
+    <hr />
+    <p id="mypara"></p>
+    <script>
+      //   F1();
+    </script>
+  </body>
+</html>

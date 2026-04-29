@@ -1,0 +1,57 @@
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <input type="button" value="Click Me" onclick="Flip()" /> -->
+    <div
+      id="myDiv1"
+      style="
+        height: 300px;
+        width: 300px;
+        background-color: cadetblue;
+        margin: 5px;
+      "
+      onmouseover="Flip('myDiv1')"
+      onmouseout="Flip('myDiv1')"
+    ></div>
+
+    <div
+      id="myDiv2"
+      style="
+        height: 300px;
+        width: 300px;
+        background-color: cadetblue;
+        margin: 5px;
+      "
+      onmouseover="Flip('myDiv2')"
+      onmouseout="Flip('myDiv2')"
+    ></div>
+
+    <div
+      id="myDiv3"
+      style="
+        height: 300px;
+        width: 300px;
+        background-color: cadetblue;
+        margin: 5px;
+      "
+      onmouseover="Flip('myDiv3')"
+      onmouseout="Flip('myDiv3')"
+    ></div>
+
+    <script>
+      var flag = true;
+      function Flip(id) {
+        var refTomyDiv = document.getElementById(id);
+        if (flag == true) {
+          refTomyDiv.style.backgroundColor = "yellow";
+          flag = false;
+        } else {
+          refTomyDiv.style.backgroundColor = "cadetblue";
+          flag = true;
+        }
+      }
+    </script>
+  </body>
+</html>

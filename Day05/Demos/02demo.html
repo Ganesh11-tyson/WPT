@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <title>Test Validations</title>
+  </head>
+  <body>
+    Name: <input type="text" id="txtName" value="" />
+    <hr />
+    <p id="errorMessageParagraphForName" style="color: red"></p>
+    <br />
+
+    <hr />
+
+    Address: <input type="text" id="txtAddress" value="" />
+    <hr />
+    <p id="errorMessageParagraphForAddress" style="color: red"></p>
+    <br />
+
+    EMail: <input type="text" id="txtEMail" value="" />
+    <hr />
+    <p id="errorMessageParagraphForEMail" style="color: red"></p>
+    <br />
+
+    <hr />
+
+    <p id="messsgeParagraph" style="color: blue"></p>
+    <br />
+    <input
+      type="button"
+      id="btnRegister"
+      value="Register"
+      onclick="Validate()"
+    />
+
+    <!-- <script src="iacsd.js"></script> -->
+    <script src="iacsd.min.js"></script>
+    <script>
+      function Validate() {
+        debugger;
+        var refToMesssgeParagraph = document.getElementById("messsgeParagraph");
+
+        refToMesssgeParagraph.innerText = "";
+
+        ValidateForEmpty(
+          "txtName",
+          "errorMessageParagraphForName",
+          "Name is required",
+          "messsgeParagraph",
+        );
+
+        ValidateForEmpty(
+          "txtAddress",
+          "errorMessageParagraphForAddress",
+          "Address is required",
+          "messsgeParagraph",
+        );
+
+        ValidateForEmpty(
+          "txtEMail",
+          "errorMessageParagraphForEMail",
+          "EMail is required",
+          "messsgeParagraph",
+        );
+      }
+    </script>
+  </body>
+</html>

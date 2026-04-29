@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <img
+      id="mycar"
+      src="car.png"
+      style="position: absolute; left: 0px; top: 50px"
+    />
+
+    <div
+      id="mydiv12"
+      style="
+        height: 50px;
+        width: 100%;
+        background-color: black;
+        position: absolute;
+        left: 0px;
+        top: 100px;
+      "
+    ></div>
+    <input type="button" id="btn" value="Click Me" onclick="Move()" />
+    <script>
+      var leftCounter = 0;
+      function Move() {
+        var refTomycar = document.getElementById("mycar");
+        refTomycar.style.left = leftCounter + "px";
+        leftCounter = leftCounter + 10;
+      }
+    </script>
+  </body>
+</html>

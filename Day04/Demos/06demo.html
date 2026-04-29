@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <title>register here</title>
+  </head>
+  <body>
+    <center>
+      <table style="width: 450px">
+        <tr>
+          <td>Enter Your Name:</td>
+          <td>
+            <input type="text" id="txtName" />
+          </td>
+          <td>
+            <h5 id="errorForTxtName" style="color: red"></h5>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Enter Your Address:</td>
+          <td>
+            <input type="text" id="txtAddress" />
+          </td>
+          <td>
+            <h5 id="errorForTxtAddress" style="color: red"></h5>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="3" style="text-align: center">
+            <input
+              type="button"
+              id="btnRegister"
+              value="Click Me"
+              onclick="Validate()"
+            />
+          </td>
+        </tr>
+      </table>
+      <hr />
+      <p id="mypara"></p>
+    </center>
+
+    <script>
+      function ValidateEmpty(id, errid, errMessage) {
+        var refTotxtControl = document.getElementById(id);
+        var refToerrorControl = document.getElementById(errid);
+        var refTomypara = document.getElementById("mypara");
+
+        if (refTotxtControl.value == "") {
+          refToerrorControl.innerText = errMessage;
+        } else {
+          refToerrorControl.innerText = "";
+          refTomypara.innerText = refTomypara.innerText + refTotxtControl.value;
+        }
+      }
+
+      function Validate() {
+        var refTomypara = document.getElementById("mypara");
+        refTomypara.innerText = "";
+
+        ValidateEmpty("txtName", "errorForTxtName", "Name is required!");
+
+        ValidateEmpty(
+          "txtAddress",
+          "errorForTxtAddress",
+          "Address is required!",
+        );
+      }
+    </script>
+  </body>
+</html>

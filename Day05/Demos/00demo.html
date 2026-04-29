@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <title>Test Validations</title>
+  </head>
+  <body>
+    Name: <input type="text" id="txtName" value="" />
+    <hr />
+    <p id="errorMessageParagraphForName" style="color: red"></p>
+    <br />
+
+    <hr />
+
+    Address: <input type="text" id="txtAddress" value="" />
+    <hr />
+    <p id="errorMessageParagraphForAddress" style="color: red"></p>
+    <br />
+
+    <hr />
+
+    <p id="messsgeParagraph" style="color: blue"></p>
+    <br />
+    <input
+      type="button"
+      id="btnRegister"
+      value="Register"
+      onclick="Validate()"
+    />
+
+    <script>
+      function Validate() {
+        ValidateNameForEmpty();
+        ValidateAddressForEmpty();
+      }
+
+      function ValidateNameForEmpty() {
+        var refToTxtName = document.getElementById("txtName");
+        var refToerrorMessageParagraphForName = document.getElementById(
+          "errorMessageParagraphForName",
+        );
+
+        var refToMesssgeParagraph = document.getElementById("messsgeParagraph");
+
+        refToMesssgeParagraph.innerText = "";
+
+        if (refToTxtName.value == "") {
+          refToerrorMessageParagraphForName.innerText = "Name is required.";
+        } else {
+          refToerrorMessageParagraphForName.innerText = "";
+          refToMesssgeParagraph.innerText =
+            refToMesssgeParagraph.innerText + refToTxtName.value;
+        }
+      }
+
+      function ValidateAddressForEmpty() {
+        var refToTxtAddress = document.getElementById("txtAddress");
+        var refToerrorMessageParagraphForAddress = document.getElementById(
+          "errorMessageParagraphForAddress",
+        );
+
+        var refToMesssgeParagraph = document.getElementById("messsgeParagraph");
+
+        // refToMesssgeParagraph.innerText = "";
+
+        if (refToTxtAddress.value == "") {
+          refToerrorMessageParagraphForAddress.innerText =
+            "Address is required.";
+        } else {
+          refToerrorMessageParagraphForAddress.innerText = "";
+          refToMesssgeParagraph.innerText =
+            refToMesssgeParagraph.innerText + refToTxtAddress.value;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Register here</title>
+</head>
+
+<body>
+    <center>
+        <tr>
+            <td>Enter your name:</td>
+            <td>
+                <input type="text" id="txtname">
+            </td>
+            <td>
+                <h5 id="errorForTxtName" style="color: red;"></h5>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Enter your number:</td>
+            <td>
+                <input type="text" id="txtnumber">
+            </td>
+            <td>
+                <h5 id="errorForTxtNumber" style="color: red;"></h5>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Enter your Address:</td>
+            <td>
+                <input type="text" id="txtAddress">
+            </td>
+            <td>
+                <h5 id="errorForTxtAddress" style="color: red;"></h5>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Enter your Date:</td>
+            <td>
+                <input type="date" id="txtdate">
+            </td>
+            <td>
+                <h5 id="errorForTxtdate" style="color: red;"></h5>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="3" style="text-align: center;">
+                <input type="button" id="btnRegister" value="Submit" onclick="Validate()">
+            </td>
+        </tr>
+        <hr>
+        <p id="mypara"></p>
+    </center>
+
+    <script>
+        function Validate(){
+
+            var refTotxtName= document.getElementById("txtname")
+            var refToerrorForTxtName=document.getElementById("errorForTxtName")
+            var refTomypara=document.getElementById("mypara")
+
+            if(refTotxtName.value ==""){
+                refToerrorForTxtName.innerText="name is required"
+            }else{
+                refTotxtName.innerText="";
+                refTomypara.innerText= refTotxtName.value;
+            }
+
+            var refTotxtnumber=document.getElementById("txtnumber")
+            var refToerrorforTxtnumber=document.getElementById("errorForTxtNumber")
+            var refTomypara=document.getElementById("mypara")
+
+            if(refTotxtnumber.value==""){
+                refToerrorforTxtnumber.innerText="number is required"
+            }else{
+                refTotxtnumber.innerText="";
+                refTomypara.innerText=refTotxtnumber.value;
+            }
+             
+            var refTotxtAddress=document.getElementById("txtAddress")
+            var refToerrorfortxtaddress=document.getElementById("errorForTxtAddress")
+            var refTomypara=document.getElementById("mypara")
+
+            if(refTotxtAddress.value==""){
+                refToerrorfortxtaddress.innerText="Address is required"
+            }else{
+                refTotxtnumber.innerText="";
+                refTomypara.innerText=refTotxtAddress.value;
+            }
+            
+
+        }
+    </script>
+</body>
+
+</html>
